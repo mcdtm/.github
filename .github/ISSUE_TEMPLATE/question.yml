@@ -1,0 +1,53 @@
+name: Question
+description: Zadaj pytanie dotyczące projektów mcdtm.
+title: "[Question]: "
+labels: ["question", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Masz pytanie? Chętnie odpowiemy!
+
+        **Uwaga:** Ten formularz służy do pytań, na które odpowiedź może
+        przydać się innym. Jeśli potrzebujesz szybkiej pomocy, lepiej
+        napisz na naszym Discordzie.
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Zasady
+      options:
+        - label: Przeczytałem/am [CONTRIBUTING.md](https://github.com/mcdtm/.github/blob/main/CONTRIBUTING.md) i stosuję się do zawartych w nim zasad.
+          required: true
+        - label: Sprawdziłem/am, czy podobne pytanie nie zostało już zadane.
+          required: true
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projekt
+      description: Którego repozytorium dotyczy pytanie?
+      options:
+        - Plugin
+        - API
+        - Backend / usługa
+        - Infrastruktura
+        - Inne
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Pytanie
+      description: Opisz, czego dotyczy Twoje pytanie.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontekst
+      description: Co próbowałeś już zrobić? Jakie kroki podjąłeś?
+    validations:
+      required: false
