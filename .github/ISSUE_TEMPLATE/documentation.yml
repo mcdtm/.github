@@ -1,0 +1,68 @@
+name: Documentation
+description: Zgłoś problem lub propozycję dotyczącą dokumentacji.
+title: "[Docs]: "
+labels: ["documentation", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dokumentacja to ważna część projektu. Dziękujemy za pomoc w jej ulepszaniu!
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Zasady
+      options:
+        - label: Przeczytałem/am [CONTRIBUTING.md](https://github.com/mcdtm/.github/blob/main/CONTRIBUTING.md) i stosuję się do zawartych w nim zasad.
+          required: true
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projekt
+      description: Którego repozytorium dotyczy problem?
+      options:
+        - Plugin
+        - API
+        - Backend / usługa
+        - Infrastruktura
+        - Inne
+    validations:
+      required: true
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Rodzaj zgłoszenia
+      options:
+        - Błąd w dokumentacji (literówka, nieaktualna informacja)
+        - Brakująca dokumentacja
+        - Propozycja ulepszenia
+        - Inne
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Opis
+      description: Co jest nie tak lub czego brakuje?
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Lokalizacja
+      description: Link do pliku lub sekcji, której dotyczy zgłoszenie.
+      placeholder: "np. README.md, sekcja Instalacja"
+    validations:
+      required: false
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propozycja zmiany
+      description: Jak powinna wyglądać poprawiona dokumentacja?
+    validations:
+      required: false
