@@ -1,0 +1,152 @@
+name: Bug Report
+description: Zgłoś błąd w pluginie, API, usłudze backendowej lub infrastrukturze.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dziękujemy za zgłoszenie! Wypełnij poniższe pola najlepiej jak potrafisz.
+        Zgłaszaj tylko takie problemy, które jesteś w stanie odtworzyć.
+
+        **Przed zgłoszeniem:**
+        - Sprawdź, czy problem nie został już opisany w istniejących issues.
+        - Upewnij się, że używasz najnowszej wersji z głównej gałęzi.
+        - Błędy bezpieczeństwa zgłaszaj przez [SECURITY.md](https://github.com/mcdtm/.github/blob/main/SECURITY.md),
+          **nie** przez ten formularz.
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Zasady
+      description: Przed wysłaniem upewnij się, że:
+      options:
+        - label: Przeczytałem/am [CONTRIBUTING.md](https://github.com/mcdtm/.github/blob/main/CONTRIBUTING.md) i stosuję się do zawartych w nim zasad.
+          required: true
+        - label: Szukałem/am już tego problemu w istniejących issues.
+          required: true
+        - label: Używam najnowszej wersji z głównej gałęzi.
+          required: true
+        - label: Nie zgłaszam luki bezpieczeństwa przez ten formularz.
+          required: true
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projekt
+      description: Którego repozytorium dotyczy problem?
+      options:
+        - Plugin
+        - API
+        - Backend / usługa
+        - Infrastruktura
+        - Inne
+    validations:
+      required: true
+
+  - type: dropdown
+    id: minecraft-version
+    attributes:
+      label: Wersja Minecrafta
+      description: Na jakiej wersji Minecrafta występuje problem?
+      options:
+        - 26.x
+        - 1.21.x
+        - 1.20.x
+        - 1.19.x
+        - 1.18.x
+        - 1.17.x
+        - 1.16.x
+        - 1.15.x
+        - 1.14.x
+        - 1.13.x
+        - 1.12.x
+        - 1.11.x
+        - 1.10.x
+        - 1.9.x
+        - 1.8.x
+        - 1.7.x
+        - Inna (podaj w opisie)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server-software
+    attributes:
+      label: Oprogramowanie serwera
+      description: Na jakim serwerze odtwarzasz problem?
+      options:
+        - CraftBukkit
+        - Spigot
+        - Paper
+        - Purpur
+        - Inne (podaj w opisie)
+    validations:
+      required: true
+
+  - type: input
+    id: java-version
+    attributes:
+      label: Wersja Javy
+      description: Wynik polecenia `java -version`.
+      placeholder: "np. openjdk 21.0.2"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Wersja pluginu / API / usługi
+      description: Numer wersji lub hash commita.
+      placeholder: "np. 2.3.1 lub a1b2c3d"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Opis problemu
+      description: Co się stało i czego się spodziewałeś?
+      placeholder: |
+        Opisz, co robiłeś, gdy wystąpił problem.
+        Napisz, czego oczekiwałeś, a co się stało zamiast tego.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki do odtworzenia
+      description: Numerowana lista kroków, które prowadzą do problemu.
+      placeholder: |
+        1. Wejdź na serwer
+        2. Wpisz komendę `/example`
+        3. Zobacz błąd w konsoli
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logi lub stack trace
+      description: Wklej pełny log lub stack trace. Nie używaj screenshota.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Konfiguracja (jeśli dotyczy)
+      description: Wklej istotne fragmenty konfiguracji. Pamiętaj o usunięciu sekretów.
+      render: yaml
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Dodatkowy kontekst
+      description: Zrzuty ekranu, linki, inne informacje.
+    validations:
+      required: false
