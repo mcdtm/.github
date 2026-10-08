@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord mcdtm.pl
+    url: https://mcdtm.pl
+    about: Szybka pomoc, pytania i dyskusje na żywo.
+  - name: GitHub Discussions
+    url: https://github.com/orgs/mcdtm/discussions
+    about: Dłuższe dyskusje, pytania i propozycje.
+  - name: Security Policy
+    url: https://github.com/mcdtm/.github/blob/main/SECURITY.md
+    about: Jak zgłaszać luki bezpieczeństwa.C
