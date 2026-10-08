@@ -1,0 +1,74 @@
+name: Feature Request
+description: Zaproponuj nową funkcję lub ulepszenie w projektach mcdtm.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Dziękujemy za propozycję! Opisz pomysł najlepiej jak potrafisz.
+
+        **Przed zgłoszeniem:**
+        - Sprawdź, czy podobna funkcja nie została już zaproponowana.
+        - Zastanów się, czy funkcja pasuje do zakresu projektu.
+        - Jeśli nie masz pewności, otwórz dyskusję w GitHub Discussions.
+
+  - type: checkboxes
+    id: guidelines
+    attributes:
+      label: Zasady
+      options:
+        - label: Przeczytałem/am [CONTRIBUTING.md](https://github.com/mcdtm/.github/blob/main/CONTRIBUTING.md) i stosuję się do zawartych w nim zasad.
+          required: true
+        - label: Szukałem/am już tej propozycji w istniejących issues.
+          required: true
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projekt
+      description: Którego repozytorium dotyczy propozycja?
+      options:
+        - Plugin
+        - API
+        - Backend / usługa
+        - Infrastruktura
+        - Inne
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: Jaki problem rozwiązuje ta funkcja?
+      placeholder: "np. Obecnie nie można robić X, co utrudnia Y."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propozycja
+      description: Jak miałaby działać ta funkcja?
+      placeholder: |
+        Opisz, jak wyobrażasz sobie działanie funkcji.
+        Możesz podać przykłady użycia, komendy, konfigurację.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatywy
+      description: Jakie inne rozwiązania rozważałeś?
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Dodatkowy kontekst
+      description: Linki do podobnych rozwiązań w innych projektach, przykłady użycia, zrzuty ekranu.
+    validations:
+      required: false
