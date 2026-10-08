@@ -22,17 +22,17 @@ Sekrety — hasła, tokeny, klucze API, dane z serwera — zostają tam, gdzie
 ich miejsce: poza repozytoriami.
 
 Jeśli znajdziesz lukę bezpieczeństwa, nie zgłaszaj jej publicznie.
-Zajrzyj do [SECURITY.md](SECURITY.md) i napisz do nas prywatnie.
+Zajrzyj do [SECURITY.md](https://github.com/mcdtm/.github/blob/main/SECURITY.md) i napisz do nas prywatnie.
 
 ## Chcesz pomóc?
 
 Świetnie. Zanim zaczniesz, przeczytaj:
 
-- **[CONTRIBUTING.md](CONTRIBUTING.md)** — jak zgłaszać błędy, proponować
+- **[CONTRIBUTING.md](https://github.com/mcdtm/.github/blob/main/CONTRIBUTING.md)** — jak zgłaszać błędy, proponować
   funkcje i wysyłać pull requesty.
-- **[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)** — zasady naszej społeczności.
+- **[CODE_OF_CONDUCT.md](https://github.com/mcdtm/.github/blob/main/CODE_OF_CONDUCT.md)** — zasady naszej społeczności.
   Krótko: bądź spoko, krytykuj kod, nie ludzi.
-- **[SECURITY.md](SECURITY.md)** — jak zgłaszać luki bezpieczeństwa.
+- **[SECURITY.md](https://github.com/mcdtm/.github/blob/main/SECURITY.md)** — jak zgłaszać luki bezpieczeństwa.
 
 Nie musisz być ekspertem. Jeśli coś jest niejasne — pytaj. Wolimy odpowiedzieć
 na pytanie niż odrzucić pull request, który nie pasuje.
