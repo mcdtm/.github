@@ -1,0 +1,75 @@
+name: Security Report
+description: Zgłoś lukę bezpieczeństwa w projektach mcdtm.
+title: "[Security]: "
+labels: ["security", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Nie zgłaszaj luk bezpieczeństwa przez publiczne issues!**
+
+        Ten formularz służy wyłącznie do **prywatnego** zgłoszenia luki.
+        Jeśli szukasz informacji o tym, jak zgłaszać luki, przeczytaj
+        [SECURITY.md](https://github.com/mcdtm/.github/blob/main/SECURITY.md).
+
+        Jeśli wolisz zgłosić lukę przez e-mail, napisz na
+        [conduct@lukaszpietrzak.dev](mailto:conduct@lukaszpietrzak.dev).
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Projekt
+      description: Którego repozytorium dotyczy luka?
+      options:
+        - Plugin
+        - API
+        - Backend / usługa
+        - Infrastruktura
+        - Inne
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Waga luki
+      description: Jak oceniasz wagę problemu?
+      options:
+        - Krytyczna (zdalne wykonanie kodu, wyciek sekretów)
+        - Wysoka (obejście uprawnień, wyciek danych graczy)
+        - Średnia (XSS, SQLi, błędy konfiguracji)
+        - Niska (drobne problemy)
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Opis luki
+      description: Na czym polega problem?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki do odtworzenia
+      description: Jak można odtworzyć lukę?
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potencjalny wpływ
+      description: Co osoba atakująca mogłaby zrobić?
+    validations:
+      required: true
+
+  - type: textarea
+    id: fix
+    attributes:
+      label: Propozycja poprawki
+      description: Jeśli masz pomysł na rozwiązanie, opisz go tutaj.
+    validations:
+      required: false
